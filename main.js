@@ -13,11 +13,18 @@ function createWindow () {
     height: 600,
     webPreferences: {
       preload: path.join(__dirname, 'preload.js')
-    }
-  })
+
+    },
+  });
+
+
 
   // and load the index.html of the app.
-  mainWindow.loadFile('index.html')
+  mainWindow.loadFile('index.html');
+
+
+  //mainWindow.setAutoHideMenuBar(true);
+  mainWindow.autoHideMenuBar = true;
 
   // Open the DevTools.
   // mainWindow.webContents.openDevTools()
